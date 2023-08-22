@@ -1,0 +1,44 @@
+{
+  "name": "robier/email-normalization",
+  "description": "Library for normalizing emails",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Robier\\EmailNormalization\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Robier\\EmailNormalization\\Test\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Robert Premar",
+      "email": "robert.premar@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "phpunit",
+    "test:coverage:html": "XDEBUG_MODE=coverage phpunit --coverage-text --coverage-html .cache/coverage",
+    "test:coverage:clover": "XDEBUG_MODE=coverage phpunit --coverage-text --coverage-clover .cache/clover.xml",
+    "lint": "php-cs-fixer fix --diff --ansi --dry-run",
+    "lint:fix": "php-cs-fixer fix --diff --ansi"
+  },
+  "scripts-descriptions": {
+    "lint": "Check if source syntax needs to be linted",
+    "lint:fix": "Fix source syntax with linter",
+    "test": "Run all tests",
+    "test:coverage:html": "Run all tests and generate coverage in HTML format",
+    "test:coverage:clover": "Run all tests and generate coverage in clover format"
+  },
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9",
+    "friendsofphp/php-cs-fixer": "^3.1",
+    "robier/mock-global-php-functions": "v1.0.1"
+  }
+}

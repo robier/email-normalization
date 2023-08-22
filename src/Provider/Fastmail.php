@@ -1,0 +1,147 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Robier\EmailNormalization\Provider;
+
+use Robier\EmailNormalization\DomainProvider;
+use Robier\EmailNormalization\Feature;
+use Robier\EmailNormalization\MailExchangeRecordProvider;
+
+#[Feature\LowercaseName]
+#[Feature\TagAddressing('+')]
+#[Feature\SubDomainAddressing]
+final class Fastmail implements DomainProvider, MailExchangeRecordProvider
+{
+    public function domains(): array
+    {
+        // @link https://www.fastmail.com/about/ourdomains/
+        return [
+            '123mail.org',
+            '150mail.com',
+            '150ml.com',
+            '16mail.com',
+            '2-mail.com',
+            '4email.net',
+            '50mail.com',
+            'airpost.net',
+            'allmail.net',
+            'bestmail.us',
+            'cluemail.com',
+            'elitemail.org',
+            'emailcorner.net',
+            'emailengine.net',
+            'emailengine.org',
+            'emailgroups.net',
+            'emailplus.org',
+            'emailuser.net',
+            'eml.cc',
+            'f-m.fm',
+            'fast-email.com',
+            'fast-mail.org',
+            'fastem.com',
+            'fastemail.us',
+            'fastemailer.com',
+            'fastest.cc',
+            'fastimap.com',
+            'fastmail.cn',
+            'fastmail.co.uk',
+            'fastmail.com',
+            'fastmail.com.au',
+            'fastmail.de',
+            'fastmail.es',
+            'fastmail.fm',
+            'fastmail.fr',
+            'fastmail.im',
+            'fastmail.in',
+            'fastmail.jp',
+            'fastmail.mx',
+            'fastmail.net',
+            'fastmail.nl',
+            'fastmail.org',
+            'fastmail.se',
+            'fastmail.to',
+            'fastmail.tw',
+            'fastmail.uk',
+            'fastmail.us',
+            'fastmailbox.net',
+            'fastmessaging.com',
+            'fea.st',
+            'fmail.co.uk',
+            'fmailbox.com',
+            'fmgirl.com',
+            'fmguy.com',
+            'ftml.net',
+            'h-mail.us',
+            'hailmail.net',
+            'imap-mail.com',
+            'imap.cc',
+            'imapmail.org',
+            'inoutbox.com',
+            'internet-e-mail.com',
+            'internet-mail.org',
+            'internetemails.net',
+            'internetmailing.net',
+            'jetemail.net',
+            'justemail.net',
+            'letterboxes.org',
+            'mail-central.com',
+            'mail-page.com',
+            'mailandftp.com',
+            'mailas.com',
+            'mailbolt.com',
+            'mailc.net',
+            'mailcan.com',
+            'mailforce.net',
+            'mailftp.com',
+            'mailhaven.com',
+            'mailingaddress.org',
+            'mailite.com',
+            'mailmight.com',
+            'mailnew.com',
+            'mailsent.net',
+            'mailservice.ms',
+            'mailup.net',
+            'mailworks.org',
+            'ml1.net',
+            'mm.st',
+            'myfastmail.com',
+            'mymacmail.com',
+            'nospammail.net',
+            'ownmail.net',
+            'petml.com',
+            'postinbox.com',
+            'postpro.net',
+            'proinbox.com',
+            'promessage.com',
+            'realemail.net',
+            'reallyfast.biz',
+            'reallyfast.info',
+            'rushpost.com',
+            'sent.as',
+            'sent.at',
+            'sent.com',
+            'speedpost.net',
+            'speedymail.org',
+            'ssl-mail.com',
+            'swift-mail.com',
+            'the-fastest.net',
+            'the-quickest.com',
+            'theinternetemail.com',
+            'veryfast.biz',
+            'veryspeedy.net',
+            'warpmail.net',
+            'xsmail.com',
+            'yepmail.net',
+            'your-mail.com',
+        ];
+    }
+
+    public function records(): array
+    {
+        return [
+            'in1-smtp.messagingengine.com',
+            'in2-smtp.messagingengine.com',
+        ];
+    }
+}
